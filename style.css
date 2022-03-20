@@ -1,0 +1,283 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::placeholder{
+  color: black;
+}
+
+
+/* custom buttons
+=================================== */
+
+#logo{
+  height: 1.5rem;
+}
+
+.button.is-skyblue {
+  background-color: #61dafb;
+  border-color: transparent;
+  color: #000;
+}
+
+.button.is-skyblue:hover, .button.is-skyblue.is-hovered {
+  background-color: #61c7f1;
+  border-color: transparent;
+  color: #000;
+
+}
+
+.button.is-skyblue.is-inverted {
+  background-color: transparent;
+  color: #61dafb;
+}
+
+.button.is-skyblue.is-inverted:hover, .button.is-skyblue.is-inverted.is-hovered {
+  background-color: #61dafb;
+  color: #000;
+}
+
+.button.is-skyblue.is-inverted.is-outlined {
+  background-color: transparent;
+  border-color: #61dafb;
+  color: #61dafb;
+}
+
+.button.is-skyblue.is-inverted.is-outlined:hover, .button.is-skyblue.is-inverted.is-outlined.is-hovered, .button.is-skyblue.is-inverted.is-outlined:focus, .button.is-skyblue.is-inverted.is-outlined.is-focused {
+  background-color: #61dafb;
+  color: #000;
+}
+
+.nav-item{
+  align-self: center;
+  color: #fff;
+  transition: .32s ease;
+}
+
+.nav-item:hover{
+  color: #61dafb;
+}
+
+.has-background-onyx{
+  background-color: #33373f;
+}
+
+.fullheight{
+  height: 100vh;
+}
+
+.opacity-1{
+  opacity: .8;
+
+}
+
+.has-bg-darkish{
+  background-color: #1b1c1e;
+}
+
+.bg-dark-grey{
+  background-color: #20232a;
+}
+
+.bg-grey{
+  background-color: #282c34;
+}
+
+.bg-lightgrey{
+  background-color: #7b7d8c;
+}
+
+.bg-lightblue{
+  background-color: #61dafb;
+  border: none;
+}
+
+.has-text-maxblue{
+  color: #57BAD6;
+}
+
+.has-text-maxblue:hover{
+  color: #363636;
+}
+
+.has-text-lightblue{
+  color: #61dafb;
+}
+
+.has-text-coral{
+  color: #FB8261;
+}
+
+.hover-coral:hover{
+  color: #FB8261;
+}
+
+.transition{
+  transition: .23s ease;
+}
+
+.has-text-eggshell{
+  color: #F0EBD8;
+}
+
+.is-rounded-lg{
+  border-radius: 20px;
+}
+
+.heart-phone-image{
+  padding: 4rem;
+  border-radius: 80px;
+  max-width: 90%;
+  transition: 5s ease;
+}
+
+#new-section{
+  background: linear-gradient(#20232a, #fff);
+}
+
+
+  /* mobile nav
+=================================== */
+
+.nav-mobile{
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  position: fixed;
+  width: 0vw;
+  height: 0vh;
+  z-index: 1;
+  transition: .4s ease;
+  opacity: .1;
+  transform: translateY(120vh);
+  top: -100;
+
+}
+
+.nav-list{
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-mobile-item{
+  color: #f9f9f9;
+  padding: 1.4rem;
+  padding-left: 2.2rem;
+  align-self: center;
+  width: 100%;
+}
+
+.nav-mobile-item:hover{
+  background-color: #2e323c;
+  color: #61dafb;
+}
+
+.nav-active{
+  opacity: 1;
+  height: 110vh;
+  transform: translateY(5.8vh);
+  width: 80vw;
+}
+
+.fadedElem{
+  opacity: 0;
+  transition: .6s ease;
+}
+
+.l-fadedElem{
+  opacity: 0;
+  transition: .8s ease;
+  transform: translateX(-4rem);
+}
+
+.r-fadedElem{
+  opacity: 0;
+  transition: .8s ease;
+  transform: translateX(4rem);
+}
+
+.t-fadedElem{
+  opacity: 0;
+  transition: .8s ease;
+  transform: translateY(-4rem);
+}
+
+.b-fadedElem{
+  opacity: 0;
+  transition: .8s ease;
+  transform: translateY(4rem);
+}
+
+.show{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* hero section
+=================================== */
+
+#home{
+  background: linear-gradient(
+    rgba(30, 50, 80, 0.4), rgba(0, 0, 0, 0.8)
+    ), url('https://img.freepik.com/free-vector/white-background-with-triangle-patterns_1017-18410.jpg?t=st=1647541591~exp=1647542191~hmac=9ae7d2f68989c5115509d0d35e71f1d64998a823c0611d3ab1e265469fa0fb2c&w=1380');
+    background-size: cover;
+}
+
+#hero-columns {
+  height: 100vh;
+  flex-wrap: wrap;
+}
+
+.hero-phone-image {
+  outline: 3px solid #fff;
+  -webkit-border-radius: 500px;
+  transition: 1s ease;
+}
+
+.first-image{
+  max-width: 50%;
+}
+
+/* section a
+=================================== */
+
+/* section b
+=================================== */
+
+#section-b img{
+  width: 83%;
+}
+
+/* info section
+=================================== */
+
+#section-b{
+  background: linear-gradient(white, #33373f 80%);
+}
+
+@media(max-width: 769px) {
+
+  /* <== You can change this break point as per your  needs */
+  .reverse-columns {
+    flex-direction: column-reverse;
+    display: flex;
+  }
+  .first-image{
+    margin: 0 auto;
+    max-width: 90%;
+  }
+  .heart-phone-image{
+    min-width: 100%;
+    padding: 1.6rem;
+  }
+  #section-b img{
+    width: 100%;
+  }
+
+
+}

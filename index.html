@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+  <title>Tribe Web Studio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- desktop navigation -->
+
+  <nav class="navbar bg-grey is-fixed-top" id="navbar">
+    <div class="navbar-brand ml-1 px-4 is-align-items-center is-size-4 has-align-self-center">
+      <a class="nav-item" href="#home">
+        <i class="fa-solid fa-campground"></i>
+      </a>
+      <a role="button" class="navbar-burger has-text-light" id="nav-btn" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start ml-4">
+
+      </div>
+      <div class="navbar-end mr-6">
+        <a href="#home" class="nav-item mx-5">
+          Home
+        </a>
+        <a href="#section-b" class="nav-item mx-5">
+          About
+        </a>
+        <a href="#section-a" class="nav-item mx-5">
+          Services
+        </a>
+        <a href="/blog.html" class="nav-item  mx-5">
+          Blog
+        </a>
+        <a href="/portfolio.html" class="nav-item  mx-5">
+          Portfolio
+        </a>
+        <a href="#contact" class="nav-item  mx-5">
+          Contact
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- mobile navigation -->
+
+  <div class="nav-mobile bg-grey">
+    <ul class="nav-list is-flex is-flex-direction-column mt-6">
+      <a href="#section-b" class="nav-mobile-item is-size-5">
+        About
+      </a>
+      <a href="#section-a" class="nav-mobile-item is-size-5">
+        Services
+      </a>
+      <a href="/blog.html" class="nav-mobile-item  is-size-5">
+        Blog
+      </a>
+      <a href="/portfolio.html" class="nav-mobile-item  is-size-5">
+        Portfolio
+      </a>
+      <a href="#contact" class="nav-mobile-item is-size-5">Contact</a>
+    </ul>
+  </div>
+
+  <!-- showcase section -->
+
+  <section id="home" class="hero is-fullheight bg-grey">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column">
+            <div class="mt-6">
+              <h1 class="title has-text-light is-size-1 is-size-2-mobile"><span class="has-text-lightblue">Tribe</span> web design</h1>
+              <p class="has-text-light mt-2 subtitle is-size-3 is-size-4-mobile">Your potential realized.</p>
+              <div class="field is-grouped">
+                <p class="control">
+                  <a href="#section-a" class="button is-skyblue mt-2  has-text-weight-medium">Learn more</a>
+                  <a href="#contact" class="button is-skyblue is-inverted mt-2 is-outlined  mx-4">Get Started</a>
+                </p>
+              </div>
+
+            </div>
+          </div>
+          <div class="column my-4">
+            <img class="hero-phone-image fadedElem" loading="lazy" src="images/red-phone-app.png" alt="image of cell phone">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- section-a -->
+
+  <section id="section-a" class="section is-medium bg-dark-grey">
+    <div class="container">
+      <div class="columns my-6 is-centered has-text-centered">
+        <div class="column is-half">
+          <h2 class="title mt-6 is-2 has-text-light is-size-1-desktop">Solutions for everyone</h2>
+          <p class="is-size-3-desktop is-size-4 my-4">Build your business</p>
+        </div>
+      </div>
+      <div class="columns my-6 is-8 is-multiline">
+        <div class="column">
+          <i class="has-text-warning fa-brands fa-wordpress fa-4x mb-4"></i>
+          <p class="subtitle is-4">Template</p>
+        </div>
+        <div class="column">
+          <i class="has-text-warning fa-brands fa-html5 fa-4x mb-4"></i>
+          <p class="subtitle is-4">Custom</p>
+        </div>
+        <div class="column">
+          <i class="has-text-warning fa-brands fa-css3-alt fa-4x mb-4"></i>
+          <p class="subtitle is-4">Stylish</p>
+        </div>
+        <div class="column">
+          <i class="has-text-warning fa-brands fa-js fa-4x mb-4"></i>
+          <p class="subtitle is-4">Dynamic</p>
+        </div>
+        <div class="column">
+          <i class="has-text-warning fa-brands fa-chrome fa-4x mb-4"></i>
+          <p class="subtitle is-4">Optimized</p>
+        </div>
+        <div class="column">
+          <i class="has-text-warning fa-brands fa-firefox fa-4x mb-4"></i>
+          <p class="subtitle is-4">Compatible</p>
+        </div>
+        <div class="column">
+          <i class="has-text-warning fa-solid fa-heart fa-4x mb-4"></i>
+          <p class="subtitle is-4">Passion</p>
+        </div>
+      </div>
+  </section>
+
+  <section id="new-section" class="section is-large">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-half l-fadedElem">
+          <h2 class="is-size-2-desktop is-size-3 has-text-light">Grow organically</h2>
+        </div>
+      </div>
+      <div class="columns is-variable is-5">
+        <div class="column my-6">
+          <div class="subtitle is-4 has-text-grey-lighter fadedElem">Increased value</div>
+          <p class=" b-fadedElem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate officiis perferendis laudantium, harum provident nobis. Optio amet voluptate ducimus vel.</p>
+          <p class="mt-4 b-fadedElem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, dignissimos.</p>
+        </div>
+        <div class="column my-6">
+          <div class="subtitle is-4 has-text-grey-lighter fadedElem">Expanded network</div>
+          <p class=" b-fadedElem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim minus omnis deleniti unde cum hic pariatur quis, ex aliquid blanditiis!</p>
+          <p class="mt-4 b-fadedElem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, minima?</p>
+        </div>
+        <div class="column my-6">
+          <div class="subtitle is-4 has-text-grey-lighter fadedElem">More leads</div>
+          <p class=" b-fadedElem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem vero commodi molestiae est enim minus, aspernatur dolorum voluptas doloribus laudantium!</p>
+          <p class="mt-4 b-fadedElem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, eum!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- section-b   -->
+
+  <section id="section-b" class="section has-background-dark">
+    <div class="container">
+      <div class="columns is-centered  is-vcentered">
+        <div class="column first-image t-fadedElem has-text-centered my-6"><img src="images/Degital_marketing_SVG.svg" alt=""></div>
+        <div class="column t-fadedElem my-6 has-text-centered-desktop">
+          <h3 class="is-size-4 mb-2 my-2-desktop">Header thingy</h3>
+          <p class="is-size-5 mb-2 ">Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit. Ratione, facilis.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et id ut, rerum quod pariatur laborum, maiores! Debitis aperiam ducimus tenetur eius eum pariatur, facilis. Illum provident deserunt sunt eveniet praesentium?</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="columns reverse-columns is-centered">
+        <div class="column has-text-grey-lighter l-fadedElem is-align-self-center">
+          <h3 class="is-size-4 my-2">Header thingy</h3>
+          <p class="is-size-5 mb-2">Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit. Ratione, facilis.</p>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et id ut, rerum quod pariatur laborum, maiores! Debitis aperiam ducimus tenetur eius eum pariatur, facilis. Illum provident deserunt sunt eveniet praesentium?</p>
+        </div>
+        <div class="column r-fadedElem my-6"><img class="p-6" src="images/email_svg.svg" alt=""></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="columns is-variable is-8 is-centered is-vcentered">
+        <div class="column t-fadedElem my-6"><img class="p-6" src="images/Search_SVG.svg" alt=""></div>
+        <div class="column has-text-grey-lighter t-fadedElem is-centered">
+          <h3 class="is-size-4 my-2">Header thingy</h3>
+          <p class="is-size-5 mb-2 ">Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit. Ratione, facilis.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et id ut, rerum quod pariatur laborum, maiores! Debitis aperiam ducimus tenetur eius eum pariatur, facilis. Illum provident deserunt sunt eveniet praesentium?</p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- section-c -->
+
+  <section id="section-c" class="section has-background-onyx has-text-grey-lighter">
+    <div class="container">
+      <div class="columns is-variable is-5">
+        <div class="column my-6 l-fadedElem">
+          <div class="subtitle is-4 has-text-lightblue">This is why</div>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate officiis perferendis laudantium, harum provident nobis. Optio amet voluptate ducimus vel.</p>
+          <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, dignissimos.</p>
+        </div>
+        <div class="column my-6 fadedElem">
+          <div class="subtitle is-4 has-text-lightblue">This is why</div>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim minus omnis deleniti unde cum hic pariatur quis, ex aliquid blanditiis!</p>
+          <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, minima?</p>
+        </div>
+        <div class="column my-6 r-fadedElem">
+          <div class="subtitle is-4 has-text-lightblue">This is why</div>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem vero commodi molestiae est enim minus, aspernatur dolorum voluptas doloribus laudantium!</p>
+          <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, eum!</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- contact form section -->
+
+  <section id="contact" class="form-section section bg-grey">
+    <div class="container">
+      <div class="columns is-centered is-vcentered">
+        <div class="column">
+          <div class="my-6 fadedElem">
+            <h1 class="is-size-2 has-text-lightblue">Reach out</h1>
+            <p class="subtitle has-text-grey-lighter">Create an expression of your work.</p>
+          </div>
+        </div>
+        <div class="column is-7">
+          <div class="contact-form form fadedElem">
+            <div class="columns">
+              <div class="column">
+                <div class="field">
+                  <label for="" class="label has-text-light">First Name</label>
+                  <div class="control is-expanded has-icons-left">
+                    <input type="text" class="input" placeholder="first name" required>
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-user"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="field">
+                  <label for="" class="label has-text-light">Last Name</label>
+                  <div class="control is-expanded has-icons-left">
+                    <input type="text" class="input" placeholder="last name">
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-user"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <label for="" class="label has-text-light">Email</label>
+              <div class="control is-expanded has-icons-left">
+                <input type="text" class="input" placeholder="your email">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+              </div>
+            </div>
+            <div class="field">
+              <label for="" class="label has-text-light">Business type</label>
+              <div class="control has-icons-left">
+                <div class="select is-dark">
+                  <select>
+                    <option selected>Select</option>
+                    <option value="">Marketing</option>
+                    <option value="">Service industry</option>
+                    <option value="">Food service</option>
+                    <option value="">Medical</option>
+                    <option value="">Barber shop</option>
+                  </select>
+                </div>
+                <div class="icon is-small is-left">
+                  <i class="fa-solid fa-briefcase"></i>
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <label for="" class="label has-text-light">Project details</label>
+              <div class="control">
+                <textarea name="" cols="30" rows="8" class="textarea" placeholder=""></textarea>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <button class="button is-inverted is-outlined is-fullwidth is-skyblue mt-2">
+                    Send it
+                    <i class="ml-3 fa-solid fa-paper-plane"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer section -->
+
+  <footer class="footer bg-dark-grey">
+    <div class="container">
+      <div class="columns is-centered my-6">
+        <div class="column is-2"></div>
+        <div class="column fadedElem">
+          <p class="subtitle is-4 has-text-grey-light">Follow us</p>
+          <a href="https://www.instagram.com" target="_blank" class="nav-item mx-3">
+            <i class="fa-brands fa-instagram fa-xl"></i>
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" class="nav-item mx-3">
+            <i class="fa-brands fa-linkedin fa-xl"></i>
+          </a>
+        </div>
+        <!-- <div class="column is-1"></div> -->
+        <div class="column fadedElem">
+          <p class="subtitle is-4 has-text-grey-light">Get around</p>
+          <p><a class="nav-item my-1 is-block" href="#home">Home</a></p>
+          <p><a class="nav-item my-1 is-block" href="#section-b">About</a></p>
+          <p><a class="nav-item my-1 is-block" href="#section-a">Services</a></p>
+          <p><a class="nav-item my-1 is-block" href="/blog.html">Blog</a></p>
+          <p><a class="nav-item my-1 is-block" href="/portfolio.html">Portfolio</a></p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="content has-text-centered has-text-light">
+      <p>
+        &copy 2022 <strong class="has-text-lightblue fadedElem">Tribe</strong> Web Development
+      </p>
+    </div>
+  </footer>
+  <script src="app.js" charset="utf-8"></script>
+</body>
+</html>
