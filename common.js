@@ -1,10 +1,15 @@
 // loading buttons
 
 const loadBtn = document.querySelector('.load-btn');
-const body = document.querySelector('body');
 
 window.addEventListener('load', function(e) {
+  spinLoad();
+});
+
+function spinLoad() {
   setTimeout(() => {
     loadBtn.classList.remove('is-loading')
-  }, 800);
-});
+  }, 600);
+}
+
+// fade on loadBtn
