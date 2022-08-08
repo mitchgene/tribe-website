@@ -269,30 +269,30 @@ html {
 
 .fadedElem{
   opacity: 0;
-  transition: 1s ease;
+  transition: 1.2s ease;
 }
 
 .l-fadedElem{
   opacity: 0;
-  transition: 1s ease;
+  transition: 1.2s ease;
   transform: translateX(-2rem);
 }
 
 .r-fadedElem{
   opacity: 0;
-  transition: 1s ease;
+  transition: 1.2s ease;
   transform: translateX(2rem);
 }
 
 .t-fadedElem{
   opacity: 0;
-  transition: 1s ease;
+  transition: 1.2s ease;
   transform: translateY(-2rem);
 }
 
 .b-fadedElem{
   opacity: 0;
-  transition: 1s ease;
+  transition: 1.2s ease;
   transform: translateY(2rem);
 }
 
@@ -309,7 +309,7 @@ html {
 #home{
   background: linear-gradient(
     rgba(30, 50, 80, 0.4), rgba(0, 0, 0, 0.8)
-    ), url('https://img.freepik.com/free-vector/white-background-with-triangle-patterns_1017-18410.jpg?t=st=1647541591~exp=1647542191~hmac=9ae7d2f68989c5115509d0d35e71f1d64998a823c0611d3ab1e265469fa0fb2c&w=1380');
+    ), url('images/whitetrianglebackground.jpg');
     background-size: cover;
     background-attachment: fixed;
 }
@@ -323,6 +323,11 @@ html {
   outline: 3px solid #fff;
   -webkit-border-radius: 500px;
   transition: 1s ease;
+}
+
+.hero-circle-image {
+  max-width: 406px;
+  max-height: 408px;
 }
 
 .first-image{
@@ -351,6 +356,12 @@ html {
   background: linear-gradient(white, #33373f 80%);
 }
 
+@media(max-width: 1000px) {
+  .hero-circle-image{
+    width: 83%;
+  }
+}
+
 @media(max-width: 769px) {
 
   /* <== You can change this break point as per your  needs */
@@ -373,7 +384,7 @@ html {
     display: flex;
     flex-direction: column-reverse;
   }
-  #hero-circle-image{
+  .hero-circle-image{
     width: 63%;
   }
 

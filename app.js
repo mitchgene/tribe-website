@@ -68,13 +68,11 @@ navBtn.addEventListener('click', function(e) {
 
 const slowLoads = document.querySelectorAll('.slow-load');
 
-Array.from(slowLoads).forEach(element => {
-    element.addEventListener('load', (e) => {
-      element.classList.remove('slow-load');
-    });
-  }
-
-)
+slowLoads.forEach(element => {
+  element.addEventListener('load', () => {
+    element.classList.remove('slow-load');
+  });
+});
 
 // tabs
 
@@ -87,7 +85,6 @@ tabs.forEach(tab => {
     tab.classList.add('is-active');
 
     const target = tab.dataset.target;
-    console.log(target);
     tabContentBoxes.forEach(box => {
       if (box.getAttribute('id') === target) {
         box.classList.remove('is-hidden');
@@ -102,141 +99,151 @@ tabs.forEach(tab => {
 
 //  get form field elements
 
-const nameInput = document.querySelector('#inputName');
+const name = document.querySelector('#inputName');
 const nameIcon = document.querySelector('#name-icon');
-const emailInput = document.querySelector('#email-input');
+const email = document.querySelector('#email-input');
 const emailIcon = document.querySelector('#email-icon');
-const businessInput = document.querySelector('#business-input');
+const business = document.querySelector('#business-input');
 const businessIcon = document.querySelector('#business-icon');
-const phoneInput = document.querySelector('#phone-input');
+const phone = document.querySelector('#phone-input');
 const phoneIcon = document.querySelector('#phone-icon');
 const submitBtn = document.querySelector('#submit-btn');
 
+//phone number input mask (___) ___-____
+
+phone.addEventListener('input', function(y) {
+  var a = y.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+  y.target.value = !a[2] ? a[1] : '(' + a[1] + ') ' + a[2] + (a[3] ? '-' + a[3] : '');
+});
+
 // put form field in array
 
-const inputs = [nameInput, emailInput, businessInput, phoneInput];
+const inputs = [name, email, business, phone];
 
-// signal validity of elements with css classes
+function _(el) {
+  return document.querySelector(el);
+}
 
-function validateInput(input) {
-  if (input.hasAttribute('required') &&
-    input.validity.valid) {
-      if (input.name === 'email')
-       {
-        emailIcon.classList.remove('fa-envelope');
-        emailIcon.classList.add('fa-check', 'has-text-success');
-      }
-    input.classList.remove(
-      'is-danger',
-      'has-background-danger-light'
-    );
-    input.classList.add(
-      'is-success',
-      'has-background-success-light'
-    );
-  }
-  if (!input.hasAttribute('required') &&
-    input.validity.valueMissing) {
-    input.classList.remove(
-      'is-danger',
-      'has-background-danger-light'
-    );
-    input.classList.remove(
-      'is-success',
-      'has-background-success-light'
-    );
+const contactForm = _('.contact-form');
 
-  }
-  if (!input.hasAttribute('required') &&
-    input.value.length > 0) {
-    input.classList.add(
-      'is-success',
-      'has-background-success-light'
-    );
-  }
-  if (input.hasAttribute('required') && !input.validity.valid) {
-    input.classList.remove(
-      'is-success',
-      'has-background-success-light'
-    );
-    input.classList.add(
-      'is-danger',
-      'has-background-danger-light'
-    );
+const form = {
+  name: _('#inputName'),
+  email: _('#email-input'),
+  business: _('#business-input'),
+  phone: _('#phone-input'),
+  message: _('#message')
+}
 
+// contact form validation
+
+function checkInputs() {
+
+  const nameValue = name.value.trim();
+  const emailValue = email.value.trim();
+  const businessValue = business.value.trim();
+  const phoneValue = phone.value.trim();
+
+  if (nameValue === '') {
+    setErrorFor(name);
+  } else if (!name.validity.valid) {
+    setErrorFor(name)
+  } else {
+    setSuccessFor(name);
   }
 
-  if (input.validity.valueMissing) {
-    input.classList.remove(
-      'is-danger',
-      'has-background-danger-light',
-      'is-success',
-      'has-background-success-light'
-    );
+  if (emailValue === '') {
+    setErrorFor(email);
+  }
+
+  if (!email.validity.valid) {
+    setErrorFor(email);
+  } else {
+    setSuccessFor(email);
   }
 }
 
-// check required inputs validity
-
-function checkArray(arr) {
-  if (
-    nameInput.validity.valid &&
-    emailInput.validity.valid
-  ) {
-    console.log('form is valid');
-  } else {
-    console.log('form invalid');
+function checkInput(input) {
+  const inputValue = input.value;
+  const formControl = input.parentElement;
+  const formIcons = [...formControl.querySelectorAll('i')];
+  if (input.validity.valid && input.hasAttribute('required')) {
+    setSuccessFor(input);
+  } else if (inputValue === '' && input.hasAttribute('required')) {
+    setErrorFor(input);
+  } else if (inputValue === '' && !input.hasAttribute('required')) {
+    input.className = 'input';
+    formIcons[1].className = '';
+  } else if (inputValue.length > 2 && !input.hasAttribute('required')) {
+    setSuccessFor(input);
+  } else if (input === name && inputValue.length < 3) {
+    setErrorFor(input);
+  } else if (input === email && !input.validity.valid) {
+    setErrorFor(input);
   }
-};
+}
 
-// call validation function on each input change
+function setErrorFor(input, message) {
+  const formControl = input.parentElement;
+  const span = formControl.querySelector('span');
+  const formIcons = [...formControl.querySelectorAll('i')];
+  input.className = 'input is-danger has-background-danger-light';
+  formIcons[1].className = 'fas fa-exclamation has-text-danger';
+}
+
+function setSuccessFor(input) {
+  const formControl = input.parentElement;
+  const span = formControl.querySelector('span');
+  const formIcons = [...formControl.querySelectorAll('i')];
+  input.className = 'input is-success has-background-success-light';
+  formIcons[1].className = 'fas fa-check has-text-success';
+}
 
 inputs.forEach(input => {
   input.addEventListener('focusout', () => {
-    validateInput(input);
+    checkInput(input);
   })
 })
 
-// apply validation logic on form submit
-
-submitBtn.addEventListener('click', function(e) {
-  checkArray(inputs);
+submitBtn.addEventListener('click', () => {
   inputs.forEach(input => {
-    if (!input.validity.valid) {
-      input.classList.add(
-        'is-danger',
-        'has-background-danger-light'
-      );
-    }
-  });
+    checkInput(input);
+  })
+})
+
+
+submitBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  if (contactForm.checkValidity() == true) {
+
+    const dataPack = new FormData(contactForm);
+    submitBtn.classList.add('is-loading');
+
+    dataPack.forEach(item => {
+      setTimeout(() => {
+
+        submitBtn.classList.remove('is-loading');
+
+        console.log(item);
+
+        submitBtn.innerText = 'Message sent!';
+
+        Object.values(form).forEach(item => {
+          item.value = '';
+        })
+
+        inputs.forEach(function(input) {
+          input.className = 'input';
+          input.parentElement.children[2].children[0].className = '';
+        })
+      }, 1500);
+    })
+
+    setTimeout(() => {
+      submitBtn.innerText = 'Submit';
+    }, 4500)
+
+  } else {
+    console.log('fuck you');
+  }
 });
-
-
-
-// function validateInput(input, icon) {
-//   input.addEventListener('change', function(e) {
-//     if(input.value.length > 0) {
-//       nameIcon.classList.remove('fa-user')
-//       nameIcon.classList.add('fa-check');
-//       e.target.classList.add('is-success');
-//       nameIcon.classList.add('has-text-success');
-//     } else {
-//       e.target.classList.remove('is-success');
-//       nameIcon.classList.add('fa-user');
-//       nameIcon.classList.remove('fa-check');
-//       nameIcon.classList.remove('has-text-success');
-//     }
-//   });
-// }
-//
-// function validateEmail(elementValue) {
-//   const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-//
-//   return emailPattern.test(elementValue);
-// }
-//
-// emailInput.addEventListener('change', function(e) {
-//   validateEmail(emailInput);
-// });
-//
-// validateInput(nameInput, nameIcon);

@@ -84,7 +84,7 @@
     <div class="hero-body">
       <div class="container">
         <div class="columns is-vcentered column-reverse-mobile">
-          <div class="column">
+          <div class="column transition-3">
             <div class="mt-6">
               <h1 class="title has-text-light is-size-1 is-size-2-mobile"><span class="">Tribe</span> web design</h1>
               <p class="has-text-grey-lighter subtitle is-size-3 is-size-4-mobile">Potential realized.</p>
@@ -98,7 +98,7 @@
             </div>
           </div>
           <div class="column mt-6 has-text-centered">
-            <img class="dance2 mt-6 transition-3 slow-load" src="https://www.transparentpng.com/thumb/technology/vector-technology-8.png" alt="vector Technology @transparentpng.com" id="hero-circle-image">
+            <img class="dance2 mt-6 transition-3 fadedElem hero-circle-image" src="images/technology-png-9177.png" alt="vector Technology @transparentpng.com">
           </div>
         </div>
       </div>
@@ -258,11 +258,11 @@
           <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate officiis perferendis laudantium, harum provident nobis. Optio amet voluptate ducimus vel.</p>
           <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, dignissimos.</p>
         </div>
-        <div class="column my-6 t-fadedElem">
+        <!-- <div class="column my-6 t-fadedElem">
           <div class="subtitle is-4 has-text-lightblue">This is why</div>
           <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim minus omnis deleniti unde cum hic pariatur quis, ex aliquid blanditiis!</p>
           <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, minima?</p>
-        </div>
+        </div> -->
         <div class="column my-6 t-fadedElem">
           <div class="subtitle is-4 has-text-lightblue">This is why</div>
           <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem vero commodi molestiae est enim minus, aspernatur dolorum voluptas doloribus laudantium!</p>
@@ -285,18 +285,18 @@
           </div>
         </div>
         <div class="column is-7">
-          <div class="contact-form form fadedElem">
+          <form class="contact-form form fadedElem">
             <div class="columns">
               <div class="column">
                 <div class="field">
-                  <label for="name" class="label has-text-light">Name</label>
+                  <label for="name" class="label has-text-light">Name *</label>
                   <div class="control is-expanded has-icons-left has-icons-right">
-                    <input type="text" class="input needs-validation inputNameField" name="name" placeholder="name" id="inputName" autocomplete="off" minlength="3" maxlength="35" required>
+                    <input type="text" class="input needs-validation inputNameField" name="name" placeholder="name*" id="inputName" autocomplete="off" minlength="3" maxlength="35" required>
                     <span class="icon is-small is-left">
                       <i id="name-icon" class="fas fa-user"></i>
                     </span>
                     <span class="icon is-small is-right">
-                      <i id="name-icon" class="fas fa-check"></i>
+                      <i id="name-icon" class=""></i>
                     </span>
                   </div>
                 </div>
@@ -310,7 +310,7 @@
                       <i class="fas fa-briefcase"></i>
                     </span>
                     <span class="icon is-small is-right">
-                      <i id="name-icon" class="fas fa-check"></i>
+                      <i id="name-icon" class=""></i>
                     </span>
                   </div>
                 </div>
@@ -319,14 +319,14 @@
             <div class="columns">
               <div class="column">
                 <div class="field">
-                  <label for="email" class="label has-text-light">Email</label>
+                  <label for="email" class="label has-text-light">Email *</label>
                   <div class="control is-expanded has-icons-left has-icons-right">
-                    <input id="email-input" type="email" class="input" name="email" placeholder="your email" maxlength="60" required>
+                    <input id="email-input" type="email" class="input" name="email" placeholder="email*" maxlength="60" required>
                     <span class="icon is-small is-left">
                       <i id="email-icon" class="fas fa-envelope"></i>
                     </span>
                     <span class="icon is-small is-right">
-                      <i id="name-icon" class="fas fa-check"></i>
+                      <i id="name-icon" class=""></i>
                     </span>
                   </div>
                 </div>
@@ -335,12 +335,12 @@
                 <div class="field">
                   <label for="phone" class="label has-text-light">Phone</label>
                   <div class="control is-expanded has-icons-left has-icons-right">
-                    <input id="phone-input" type="tel" class="input" placeholder="your number" name="phone">
+                    <input id="phone-input" type="tel" class="input" placeholder="(___) ___-____" name="phone">
                     <span class="icon is-small is-left">
                       <i class="fas fa-phone"></i>
                     </span>
                     <span class="icon is-small is-right">
-                      <i id="name-icon" class="fas fa-check"></i>
+                      <i id="name-icon" class=""></i>
                     </span>
                   </div>
                 </div>
@@ -350,18 +350,18 @@
             <div class="field">
               <label for="project-details" class="label has-text-light">Project details</label>
               <div class="control">
-                <textarea cols="30" rows="8" class="textarea"  name="project-details" placeholder="tell us how we can help you"></textarea>
+                <textarea cols="30" rows="8" class="textarea" id="message"  name="message" placeholder="tell us how we can help you"></textarea>
               </div>
               <div class="field">
                 <div class="control">
-                  <button id="submit-btn" class="button is-inverted is-outlined is-fullwidth is-skyblue mt-2">
+                  <button id="submit-btn" class="button is-inverted is-outlined is-fullwidth is-skyblue mt-2" type="submit">
                     Submit
                     <i class="ml-3 fa-solid fa-paper-plane"></i>
                   </button>
                 </div>
               </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
