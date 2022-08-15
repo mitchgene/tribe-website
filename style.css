@@ -219,6 +219,20 @@ html {
     -webkit-animation: dance2 12s alternate infinite;
 }
 
+.loader{
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #61dafb;
+  border-radius: 50%;
+  width: 1.6rem;
+  height: 1.6rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 #new-section{
   /* background: linear-gradient(#20232a, #fff); */
   background: #20232a:

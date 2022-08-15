@@ -17,7 +17,6 @@ function fadeIn(elements) {
   })
 }
 
-
 const fadedElements = document.querySelectorAll('.fadedElem');
 const l_fadedElements = document.querySelectorAll('.l-fadedElem');
 const r_fadedElements = document.querySelectorAll('.r-fadedElem');
@@ -127,6 +126,7 @@ function _(el) {
 const contactForm = _('.contact-form');
 
 const form = {
+  form: _('.contact-form'),
   name: _('#inputName'),
   email: _('#email-input'),
   business: _('#business-input'),
@@ -210,40 +210,90 @@ submitBtn.addEventListener('click', () => {
   })
 })
 
+function fillInputs() {
+  form.business.value = 'tribe';
+  form.email.value = 'mitchellthomp324@gmail.com';
+  form.message.value = 'hey there 48';
+  form.name.value = 'mitchell';
+  form.phone.value = '(661) 444-3815';
+}
 
-submitBtn.addEventListener('click', (e) => {
+contactForm.addEventListener('dblclick', fillInputs);
+
+const content = _('#content')
+
+contactForm.addEventListener('submit', function(e) {
+
   e.preventDefault();
+
+  function resetForm(input) {
+    const formControl = input.parentElement;
+    const span = formControl.querySelector('span');
+    const formIcons = [...formControl.querySelectorAll('i')];
+    input.className = 'input';
+    formIcons[1].className = '';
+    form.form.reset();
+  }
+
+  function showMessage(time, success, message) {
+    if (success === true) {
+      content.innerHTML = "<i class='fa fa-check fa-lg has-text-success mx-2'></i> " + message;
+    } else {
+      if (success === false) {
+        content.innerHTML = "<i class='fa fa-exclamation fa-lg has-text-danger mx-2'></i> " + message;
+      }
+    }
+
+    content.classList.remove('opacity-0');
+
+    setTimeout(() => {
+      content.classList.add('opacity-0');
+    }, time);
+
+    setTimeout(() => {
+      content.innerText = '|';
+    }, time + 1500);
+  }
 
   if (contactForm.checkValidity() == true) {
 
-    const dataPack = new FormData(contactForm);
     submitBtn.classList.add('is-loading');
 
-    dataPack.forEach(item => {
-      setTimeout(() => {
+    console.log('it works')
+
+    const dataPack = new FormData(contactForm);
+
+    const request = new XMLHttpRequest();
+
+    request.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+
+        console.log(this.readyState);
+
+        console.log(this.responseText);
+
+        showMessage(8000, true, "Message sent!  Thank you for contacting us.");
 
         submitBtn.classList.remove('is-loading');
 
-        console.log(item);
-
-        submitBtn.innerText = 'Message sent!';
-
-        Object.values(form).forEach(item => {
-          item.value = '';
+        inputs.forEach(input => {
+          resetForm(input);
         })
+      } else if (this.status >= 400) {
 
-        inputs.forEach(function(input) {
-          input.className = 'input';
-          input.parentElement.children[2].children[0].className = '';
+        showMessage(8000, false, "There was an error, please try again later.");
+
+        submitBtn.classList.remove('is-loading');
+
+        inputs.forEach(input => {
+          resetForm(input);
         })
-      }, 1500);
-    })
+      }
+    };
 
-    setTimeout(() => {
-      submitBtn.innerText = 'Submit';
-    }, 4500)
+    request.open('POST', 'contact.php')
 
-  } else {
-    console.log('fuck you');
+    request.send(dataPack);
   }
+
 });

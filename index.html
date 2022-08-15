@@ -4,8 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
-  <title>Tribe Web Studio</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Tribe Web Studio · Web Developement in bakersfield </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +22,7 @@
   <nav class="navbar has-background-bluegrey is-fixed-top" id="navbar">
     <div class="navbar-brand ml-1 px-4 is-align-items-center is-size-4 has-align-self-center">
       <a class="nav-item" href="#home">
-        <i class="fa-solid fa-campground"></i>
+        <p>·t·r·i·b·e·</p>
       </a>
       <a role="button" class="navbar-burger has-text-light" id="nav-btn" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
         <span aria-hidden="true"></span>
@@ -154,7 +155,7 @@
                 <div class="column">
                   <h3 class="is-size-5 title has-text-grey-lighter">Wordpress</h3>
                   <p>Customizing a wordpress template is often the right path for many small businesses looking to build an online presence. </p>
-                  <p class="mt-2">Starting from a pre-built theme then molding and optimizing it to your needs is an excellent option.</p>
+                  <p class="mt-2">Starting with the correct building blocks then molding and optimizing them to your needs is an excellent option.</p>
                 </div>
               </div>
             </div>
@@ -166,7 +167,7 @@
                 <div class="column">
                   <h3 class="is-size-5 title has-text-grey-lighter">SEO</h3>
                   <p>Either of these methods lend themselves to a higher level of customization, allowing google to find your website and set it on a trajectory toward the top of the search results.</p>
-                  <p class="mt-2">Search engine optimization is a constantly evolving study.  A thorough configuration of the basics will put you well ahead of the competition.</p>
+                  <p class="mt-2">Search engine optimization is a constantly evolving study. A thorough configuration of the basics will put you well ahead of the competition.</p>
                 </div>
               </div>
 
@@ -196,7 +197,8 @@
         </div>
         <div class="column my-6">
           <div class="subtitle is-4 has-text-light fadedElem">More leads</div>
-          <p class=" b-fadedElem has-text-light">If you're in business then you're in business to make money, and using technology to maximize efficiency and make your products or services accessible to your customers and clients is non-negotiable.</p>
+          <p class=" b-fadedElem has-text-light">If you're in business then you're in business to make money, and using technology to maximize efficiency and make your products or services accessible to your customers and clients is non-negotiable.
+          </p>
 
         </div>
       </div>
@@ -253,7 +255,7 @@
         </div>
       </div>
       <div class="columns is-variable is-5">
-        <div class="column my-6 t-fadedElem">
+        <div class="column is-4 my-6 t-fadedElem">
           <div class="subtitle is-4 has-text-lightblue">This is why</div>
           <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate officiis perferendis laudantium, harum provident nobis. Optio amet voluptate ducimus vel.</p>
           <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, dignissimos.</p>
@@ -263,7 +265,7 @@
           <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim minus omnis deleniti unde cum hic pariatur quis, ex aliquid blanditiis!</p>
           <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, minima?</p>
         </div> -->
-        <div class="column my-6 t-fadedElem">
+        <div class="column is-8 my-6 t-fadedElem">
           <div class="subtitle is-4 has-text-lightblue">This is why</div>
           <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem vero commodi molestiae est enim minus, aspernatur dolorum voluptas doloribus laudantium!</p>
           <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, eum!</p>
@@ -275,7 +277,7 @@
 
   <!-- contact form section -->
 
-  <section id="contact" class="form-section section is-medium bg-grey">
+  <section id="contact" class="form-section section is-medium bg-grey transition">
     <div class="container">
       <div class="columns is-centered is-vcentered">
         <div class="column">
@@ -350,14 +352,17 @@
             <div class="field">
               <label for="project-details" class="label has-text-light">Project details</label>
               <div class="control">
-                <textarea cols="30" rows="8" class="textarea" id="message"  name="message" placeholder="tell us how we can help you"></textarea>
+                <textarea cols="30" rows="8" class="textarea" id="message" name="message" maxlength="255" placeholder="how we can help you ?"></textarea>
               </div>
               <div class="field">
                 <div class="control">
-                  <button id="submit-btn" class="button is-inverted is-outlined is-fullwidth is-skyblue mt-2" type="submit">
+                  <button id="submit-btn" class="button is-inverted is-outlined is-fullwidth is-skyblue mt-4" type="submit">
                     Submit
                     <i class="ml-3 fa-solid fa-paper-plane"></i>
                   </button>
+                  <div class="columns is-centered has-text-light is-size-5 mt-4">
+                    <p class="opacity-0 transition-3" id="content">|</p>
+                  </div>
                 </div>
               </div>
             </div>
