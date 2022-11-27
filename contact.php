@@ -67,7 +67,7 @@ $mail->addReplyTo($email, $name);
 $mail->addAddress('mitchell@tribewebstudio.com', 'mitchell');
 
 //Set the subject line
-$mail->Subject = 'PHPMailer GMail SMTP test';
+$mail->Subject = 'contact';
 
 //Replace the plain text body with one created manually
 $mail->AltBody = 'This is a plain-text message body';
@@ -82,6 +82,8 @@ $mail->Body = "	Name :  ".$name. "
             <br>Message :  ".$message ;
 
 //send the message, check for errors
+$mail->IsHTML(false);
+
 if (!$mail->send()) {
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {

@@ -26,9 +26,9 @@ html {
 }
 
 .button.is-skyblue:hover, .button.is-skyblue.is-hovered {
-  background-color: transparent;
-  border-color: #61dafb;
-  color: #61dafb;
+  background-color: #51cdf0;
+  border-color: transparent;
+  color: #000;
 
 }
 
@@ -93,7 +93,7 @@ html {
 }
 
 .has-background-bluegrey{
-  background-color: #323846;
+  background-color: rgba(50,56,70, .79);
 }
 
 .bg-dark-grey{
@@ -143,6 +143,14 @@ html {
 
 .transition-3{
   transition: .75s ease;
+}
+
+.transition-4{
+  transition: 1.4s ease;
+}
+
+.transition-long{
+  transition: 2.6s ease;
 }
 
 .slow-load{
@@ -250,7 +258,7 @@ html {
   width: 0vw;
   height: 0vh;
   z-index: 1;
-  transition: .4s ease;
+  transition: .2s ease;
   opacity: .1;
   transform: translateY(120vh);
   top: -100;
@@ -275,9 +283,9 @@ html {
 }
 
 .nav-active{
-  opacity: 1;
+  opacity: .86;
   height: 110vh;
-  transform: translateY(4vh);
+  transform: translateY(3.25rem);
   width: 80vw;
 }
 
@@ -289,30 +297,40 @@ html {
 .l-fadedElem{
   opacity: 0;
   transition: 1.2s ease;
-  transform: translateX(-2rem);
+  transform: translateX(-1.6rem);
 }
 
 .r-fadedElem{
   opacity: 0;
   transition: 1.2s ease;
-  transform: translateX(2rem);
+  transform: translateX(1.6rem);
 }
 
 .t-fadedElem{
   opacity: 0;
   transition: 1.2s ease;
-  transform: translateY(-2rem);
+  transform: translateY(-1.6rem);
 }
 
 .b-fadedElem{
   opacity: 0;
   transition: 1.2s ease;
-  transform: translateY(2rem);
+  transform: translateY(1.6rem);
 }
 
 .show{
   opacity: 1;
   transform: translateY(0);
+}
+
+
+.blur-filter.is-active{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(6px) grayscale(80%);
+  -webkit-backdrop-filter: blur(12px) grayscale(80%);
+  z-index: 1;
 }
 
 
@@ -340,8 +358,11 @@ html {
 }
 
 .hero-circle-image {
-  max-width: 406px;
-  max-height: 408px;
+  max-width: 22rem;
+}
+
+.hero-circle-image:hover{
+  filter: drop-shadow(6px 6px 16px #61dafb) contrast(130%);
 }
 
 .first-image{
@@ -401,7 +422,4 @@ html {
   .hero-circle-image{
     width: 63%;
   }
-
-
-
 }

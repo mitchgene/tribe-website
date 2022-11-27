@@ -24,44 +24,15 @@ const t_fadedElements = document.querySelectorAll('.t-fadedElem');
 const b_fadedElements = document.querySelectorAll('.b-fadedElem');
 
 
-fadedElements.forEach(el => {
-  observer.observe(el);
-})
+fadedElements.forEach(el => { observer.observe(el); })
 
-l_fadedElements.forEach(el => {
-  observer.observe(el);
-})
+l_fadedElements.forEach(el => { observer.observe(el); })
 
-r_fadedElements.forEach(el => {
-  observer.observe(el);
-})
+r_fadedElements.forEach(el => { observer.observe(el); })
 
-t_fadedElements.forEach(el => {
-  observer.observe(el);
-})
+t_fadedElements.forEach(el => { observer.observe(el); })
 
-b_fadedElements.forEach(el => {
-  observer.observe(el);
-})
-
-const navBtn = document.querySelector('#nav-btn');
-const navMobile = document.querySelector('.nav-mobile');
-const mobileLink = document.querySelector('.nav-mobile-item');
-
-
-// close nav menu when a link is clicked
-
-window.addEventListener('click', (e) => {
-  if (e.target !== navMobile && e.target !== navBtn) {
-    navMobile.classList.remove('nav-active');
-    navBtn.classList.remove('is-active');
-  }
-})
-
-navBtn.addEventListener('click', function(e) {
-  navMobile.classList.toggle('nav-active');
-  navBtn.classList.toggle('is-active');
-});
+b_fadedElements.forEach(el => { observer.observe(el); })
 
 // fade on load
 
@@ -71,6 +42,29 @@ slowLoads.forEach(element => {
   element.addEventListener('load', () => {
     element.classList.remove('slow-load');
   });
+});
+
+// navigation
+
+const navBtn = document.querySelector('#nav-btn');
+const navMobile = document.querySelector('.nav-mobile');
+const mobileLink = document.querySelector('.nav-mobile-item');
+const blurFilter = document.querySelector('.blur-filter');
+
+// close nav menu when a link is clicked
+
+window.addEventListener('click', (e) => {
+  if (e.target !== navMobile && e.target !== navBtn) {
+    blurFilter.classList.remove('is-active')
+    navMobile.classList.remove('nav-active');
+    navBtn.classList.remove('is-active');
+  }
+})
+
+navBtn.addEventListener('click', function(e) {
+  blurFilter.classList.toggle('is-active')
+  navMobile.classList.toggle('nav-active');
+  navBtn.classList.toggle('is-active');
 });
 
 // tabs
@@ -210,15 +204,7 @@ submitBtn.addEventListener('click', () => {
   })
 })
 
-function fillInputs() {
-  form.business.value = 'tribe';
-  form.email.value = 'mitchellthomp324@gmail.com';
-  form.message.value = 'hey there 48';
-  form.name.value = 'mitchell';
-  form.phone.value = '(661) 444-3815';
-}
-
-contactForm.addEventListener('dblclick', fillInputs);
+// ajax call - error || success message
 
 const content = _('#content')
 
@@ -240,7 +226,7 @@ contactForm.addEventListener('submit', function(e) {
       content.innerHTML = "<i class='fa fa-check fa-lg has-text-success mx-2'></i> " + message;
     } else {
       if (success === false) {
-        content.innerHTML = "<i class='fa fa-exclamation fa-lg has-text-danger mx-2'></i> " + message;
+        content.innerHTML = "<i class='fa fa-exclamation-triangle fa-lg has-text-danger mx-2'></i> " + message;
       }
     }
 
@@ -258,8 +244,6 @@ contactForm.addEventListener('submit', function(e) {
   if (contactForm.checkValidity() == true) {
 
     submitBtn.classList.add('is-loading');
-
-    console.log('it works')
 
     const dataPack = new FormData(contactForm);
 
@@ -281,7 +265,7 @@ contactForm.addEventListener('submit', function(e) {
         })
       } else if (this.status >= 400) {
 
-        showMessage(8000, false, "There was an error, please try again later.");
+        showMessage(8000, false, "Oops! There was an error, please try again later.");
 
         submitBtn.classList.remove('is-loading');
 
@@ -293,7 +277,12 @@ contactForm.addEventListener('submit', function(e) {
 
     request.open('POST', 'contact.php')
 
-    request.send(dataPack);
-  }
+    request.onerror = function() {
 
+      showMessage(8000, false, "Oops!  There was an error, please try again later.");
+    }
+
+    request.send(dataPack);
+    
+  }
 });
