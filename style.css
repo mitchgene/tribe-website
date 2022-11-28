@@ -22,13 +22,13 @@ html {
 .button.is-skyblue {
   background-color: #61dafb;
   border-color: transparent;
-  color: #000;
+  color: #393939;
 }
 
 .button.is-skyblue:hover, .button.is-skyblue.is-hovered {
   background-color: #51cdf0;
   border-color: transparent;
-  color: #000;
+  color: #393939;
 
 }
 
@@ -39,7 +39,7 @@ html {
 
 .button.is-skyblue.is-inverted:hover, .button.is-skyblue.is-inverted.is-hovered {
   background-color: #61dafb;
-  color: #000;
+  color: #393939;
 }
 
 .button.is-skyblue.is-inverted.is-outlined {
@@ -50,7 +50,7 @@ html {
 
 .button.is-skyblue.is-inverted.is-outlined:hover, .button.is-skyblue.is-inverted.is-outlined.is-hovered, .button.is-skyblue.is-inverted.is-outlined:focus, .button.is-skyblue.is-inverted.is-outlined.is-focused {
   background-color: #61dafb;
-  color: #000;
+  color: #393939;
 }
 
 .nav-item{

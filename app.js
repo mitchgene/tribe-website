@@ -256,7 +256,7 @@ contactForm.addEventListener('submit', function(e) {
 
         console.log(this.responseText);
 
-        showMessage(8000, true, "Message sent!  Thank you for contacting us.");
+        showMessage(8000, true, "Message sent!  Thank you!");
 
         submitBtn.classList.remove('is-loading');
 
