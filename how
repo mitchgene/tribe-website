@@ -1,0 +1,38 @@
+[33mcommit 500b2271172183b03b50930da7eb2e016fd35cf2[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: mitchell <mitchellthomp324@gmail.com>
+Date:   Sun Nov 27 12:34:21 2022 -0800
+
+    change header subtitle
+
+[33mcommit 6fd24fffa9c0c7846439c42fae81ca2ca7e1bbd9[m
+Author: mitchell <mitchellthomp324@gmail.com>
+Date:   Sat Nov 26 21:58:39 2022 -0800
+
+    synced with deployed website
+
+[33mcommit 56fb1af03ead62d8b267d2af258c9c3a86648a7d[m
+Author: root <mitchellthomp324@gmail.com>
+Date:   Sun Aug 14 17:02:46 2022 -0700
+
+    completed phpmailer
+    - begin mobile menu background blur
+    - begin SEO and content
+
+[33mcommit bd0b392c59e02ecf424d5513fa649e42d9d7b05d[m
+Author: root <mitchellthomp324@gmail.com>
+Date:   Mon Aug 8 12:29:16 2022 -0700
+
+    finished contact form client logic
+    - beginning phpmailer, finish filling content
+
+[33mcommit 0748ac9edd6a8a0adbd7b21f2fa6d9504f105fb6[m
+Author: root <mitchellthomp324@gmail.com>
+Date:   Sat May 14 16:58:35 2022 -0700
+
+    Remove unneeded pages, begin contact form logic
+
+[33mcommit 53977b12987a8d8fdb692119665125412c2aaad3[m
+Author: mitchell <mitchellthomp324@gmail.com>
+Date:   Sat Mar 19 18:59:47 2022 -0700
+
+    ver1
