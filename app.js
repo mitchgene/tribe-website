@@ -283,6 +283,6 @@ contactForm.addEventListener('submit', function(e) {
     }
 
     request.send(dataPack);
-    
+
   }
 });
