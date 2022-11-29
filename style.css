@@ -92,6 +92,10 @@ html {
   background-color: #323846;
 }
 
+.has-background-transparent{
+  background-color: transparent;
+}
+
 .has-background-bluegrey{
   background-color: rgba(50,56,70, .79);
 }
@@ -341,7 +345,7 @@ html {
 #home{
   background: linear-gradient(
     rgba(30, 50, 80, 0.4), rgba(0, 0, 0, 0.8)
-    ), url('images/whitetrianglebackground.jpg');
+    ), url('images/DSC_2442.JPG');
     background-size: cover;
     background-attachment: fixed;
 }

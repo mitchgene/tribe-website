@@ -51,6 +51,38 @@ const navMobile = document.querySelector('.nav-mobile');
 const mobileLink = document.querySelector('.nav-mobile-item');
 const blurFilter = document.querySelector('.blur-filter');
 
+
+// switch navbar classes
+
+let navbarOptions = {
+  rootMargin: '-56px',
+  threshold: .0
+}
+
+let navObserver = new IntersectionObserver(callback, navbarOptions);
+
+let target = document.querySelector('#home');
+navObserver.observe(target);
+
+// the callback we setup for the observer will be executed now for the first time
+// it waits until we assign a target to our observer (even if the target is currently not visible)
+
+
+function replaceClass(element, addClass, removeClass) {
+  element.classList.add(addClass);
+  element.classList.remove(removeClass);
+}
+
+function callback(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      replaceClass(navbar, 'has-background-transparent', 'has-background-bluegrey');
+    } else {
+      replaceClass(navbar, 'has-background-bluegrey', 'has-background-transparent');
+    }
+  })
+}
+
 // close nav menu when a link is clicked
 
 window.addEventListener('click', (e) => {
@@ -58,6 +90,7 @@ window.addEventListener('click', (e) => {
     blurFilter.classList.remove('is-active')
     navMobile.classList.remove('nav-active');
     navBtn.classList.remove('is-active');
+    replaceClass(navbar, 'has-background-transparent', 'has-background-bluegrey');
   }
 })
 
@@ -65,6 +98,7 @@ navBtn.addEventListener('click', function(e) {
   blurFilter.classList.toggle('is-active')
   navMobile.classList.toggle('nav-active');
   navBtn.classList.toggle('is-active');
+  replaceClass(navbar, 'has-background-bluegrey', 'has-background-transparent');
 });
 
 // tabs
