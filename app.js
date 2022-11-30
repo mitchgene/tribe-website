@@ -76,9 +76,9 @@ function replaceClass(element, addClass, removeClass) {
 function callback(entries, observer) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      replaceClass(navbar, 'has-background-transparent', 'has-background-bluegrey');
+      replaceClass(navbar, 'has-background-transparent', 'is-active');
     } else {
-      replaceClass(navbar, 'has-background-bluegrey', 'has-background-transparent');
+      replaceClass(navbar, 'is-active', 'has-background-transparent');
     }
   })
 }
@@ -86,11 +86,12 @@ function callback(entries, observer) {
 // close nav menu when a link is clicked
 
 window.addEventListener('click', (e) => {
-  if (e.target !== navMobile && e.target !== navBtn) {
+  if (e.target !== navMobile && e.target !== navBtn && e.target !== navbar) {
     blurFilter.classList.remove('is-active')
     navMobile.classList.remove('nav-active');
     navBtn.classList.remove('is-active');
-    replaceClass(navbar, 'has-background-transparent', 'has-background-bluegrey');
+
+    // else if navbar desktop
   }
 })
 
@@ -98,7 +99,7 @@ navBtn.addEventListener('click', function(e) {
   blurFilter.classList.toggle('is-active')
   navMobile.classList.toggle('nav-active');
   navBtn.classList.toggle('is-active');
-  replaceClass(navbar, 'has-background-bluegrey', 'has-background-transparent');
+  replaceClass(navbar, 'is-active', 'has-background-transparent');
 });
 
 // tabs

@@ -100,6 +100,11 @@ html {
   background-color: rgba(50,56,70, .79);
 }
 
+.navbar.is-active{
+  background-color: rgba(50,56,70, .79);
+  border-bottom: 1px solid #f3f3f3;
+}
+
 .bg-dark-grey{
   background-color: #20232a;
 }
@@ -384,6 +389,7 @@ html {
 
 #section-b img{
   width: 81%;
+  filter: drop-shadow(1px 2px 2px #61dafb);
 }
 
 
@@ -392,7 +398,7 @@ html {
 
 
 #section-b{
-  background: linear-gradient(white, #33373f 80%);
+  background: #F5F5F5;
 }
 
 @media(max-width: 1000px) {
