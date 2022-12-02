@@ -1,5 +1,14 @@
 const navbar = document.querySelector('#navbar');
+const home = document.querySelector('#home');
 const body = document.querySelector('body');
+
+// home background fadedElem
+
+window.addEventListener('load', function(e) {
+  setTimeout(() => {
+    home.children[0].classList.remove('no-brightness');
+  }, 500)
+});
 
 // elements fade in on scroll
 

@@ -105,6 +105,10 @@ html {
   border-bottom: 1px solid #f3f3f3;
 }
 
+.has-background-darkblue{
+  background-color: #2d4470;
+}
+
 .bg-dark-grey{
   background-color: #20232a;
 }
@@ -160,6 +164,10 @@ html {
 
 .transition-long{
   transition: 2.6s ease;
+}
+
+.no-brightness{
+  backdrop-filter: brightness(.1);
 }
 
 .slow-load{
@@ -300,30 +308,30 @@ html {
 
 .fadedElem{
   opacity: 0;
-  transition: 1.2s ease;
+  transition: 1s ease;
 }
 
 .l-fadedElem{
   opacity: 0;
-  transition: 1.2s ease;
+  transition: 1s ease;
   transform: translateX(-1.6rem);
 }
 
 .r-fadedElem{
   opacity: 0;
-  transition: 1.2s ease;
+  transition: 1s ease;
   transform: translateX(1.6rem);
 }
 
 .t-fadedElem{
   opacity: 0;
-  transition: 1.2s ease;
+  transition: 1s ease;
   transform: translateY(-1.6rem);
 }
 
 .b-fadedElem{
   opacity: 0;
-  transition: 1.2s ease;
+  transition: 1s ease;
   transform: translateY(1.6rem);
 }
 
@@ -397,6 +405,10 @@ html {
 =================================== */
 
 
+.form-section{
+  background: linear-gradient(4deg, #2d4470 6% 4%, #282c34 3% );
+}
+
 #section-b{
   background: #F5F5F5;
 }
@@ -431,5 +443,8 @@ html {
   }
   .hero-circle-image{
     width: 63%;
+  }
+  .form-section{
+    background: linear-gradient(4deg, #2d4470 6% 4%, #282c34 30% );
   }
 }
