@@ -368,14 +368,8 @@ html {
   flex-wrap: wrap;
 }
 
-.hero-phone-image {
-  outline: 3px solid #fff;
-  -webkit-border-radius: 500px;
-  transition: 1s ease;
-}
-
 .hero-circle-image {
-  max-width: 22rem;
+  max-width: 18rem;
 }
 
 .hero-circle-image:hover{
