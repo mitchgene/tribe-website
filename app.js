@@ -7,7 +7,7 @@ const body = document.querySelector('body');
 window.addEventListener('load', function(e) {
   setTimeout(() => {
     home.children[0].classList.remove('no-brightness');
-  }, 500)
+  }, 350)
 });
 
 // elements fade in on scroll
@@ -85,9 +85,13 @@ function replaceClass(element, addClass, removeClass) {
 function callback(entries, observer) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      replaceClass(navbar, 'has-background-transparent', 'is-active');
+      setTimeout(() => {
+        replaceClass(navbar, 'has-background-transparent', 'is-active');
+      }, 200)
     } else {
-      replaceClass(navbar, 'is-active', 'has-background-transparent');
+      setTimeout(() => {
+        replaceClass(navbar, 'is-active', 'has-background-transparent');
+      }, 200)
     }
   })
 }

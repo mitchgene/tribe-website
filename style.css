@@ -167,7 +167,7 @@ html {
 }
 
 .no-brightness{
-  backdrop-filter: brightness(.3) grayscale(1);
+  backdrop-filter: brightness(.1) grayscale(1);
 }
 
 .slow-load{
