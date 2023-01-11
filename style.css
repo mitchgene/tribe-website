@@ -63,6 +63,8 @@ html {
 
 .nav-item:hover {
   color: #61dafb;
+  outline: 1px solid #61dafb;
+border-radius: 4px;
 }
 
 .has-background-onyx {
