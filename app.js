@@ -6,7 +6,9 @@ const body = document.querySelector('body');
 
 window.addEventListener('load', function(e) {
   setTimeout(() => {
-    home.children[0].classList.remove('no-brightness');
+    home.querySelectorAll('.no-brightness-backdrop, .no-brightness').forEach(element => {
+      element.classList.remove('no-brightness', 'no-brightness-backdrop');
+    })
   }, 350)
 });
 
@@ -33,15 +35,25 @@ const t_fadedElements = document.querySelectorAll('.t-fadedElem');
 const b_fadedElements = document.querySelectorAll('.b-fadedElem');
 
 
-fadedElements.forEach(el => { observer.observe(el); })
+fadedElements.forEach(el => {
+  observer.observe(el);
+})
 
-l_fadedElements.forEach(el => { observer.observe(el); })
+l_fadedElements.forEach(el => {
+  observer.observe(el);
+})
 
-r_fadedElements.forEach(el => { observer.observe(el); })
+r_fadedElements.forEach(el => {
+  observer.observe(el);
+})
 
-t_fadedElements.forEach(el => { observer.observe(el); })
+t_fadedElements.forEach(el => {
+  observer.observe(el);
+})
 
-b_fadedElements.forEach(el => { observer.observe(el); })
+b_fadedElements.forEach(el => {
+  observer.observe(el);
+})
 
 // fade on load
 

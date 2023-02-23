@@ -169,8 +169,12 @@ border-radius: 4px;
   transition: 2.6s ease;
 }
 
-.no-brightness {
+.no-brightness-backdrop {
   backdrop-filter: brightness(.1) grayscale(1);
+}
+
+.no-brightness {
+  filter: brightness(.1);
 }
 
 .slow-load {
