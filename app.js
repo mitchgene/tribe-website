@@ -346,3 +346,8 @@ contactForm.addEventListener('submit', function(e) {
 
   }
 });
+
+if (document.querySelector('.year')) {
+  let thisYear = new Date().getFullYear();
+  document.querySelector('.year').innerText = thisYear;
+}
