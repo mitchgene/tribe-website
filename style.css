@@ -317,30 +317,30 @@ border-radius: 4px;
 
 .fadedElem {
   opacity: 0;
-  transition: 1.8s ease;
+  transition: 1.6s ease;
 }
 
 .l-fadedElem {
   opacity: 0;
-  transition: 1.8s ease;
+  transition: 1.6s ease;
   transform: translateX(-1.6rem);
 }
 
 .r-fadedElem {
   opacity: 0;
-  transition: 1.8s ease;
+  transition: 1.6s ease;
   transform: translateX(1.6rem);
 }
 
 .t-fadedElem {
   opacity: 0;
-  transition: 1.8s ease;
+  transition: 1.6s ease;
   transform: translateY(-1.6rem);
 }
 
 .b-fadedElem {
   opacity: 0;
-  transition: 1.8s ease;
+  transition: 1.6s ease;
   transform: translateY(1.6rem);
 }
 
